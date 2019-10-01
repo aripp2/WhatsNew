@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import local from '../../data/local';
+import Menu from '../Menu/Menu';
+import SearchForm from '../SearchForm/SearchForm';
+import NewsContainer from '../NewsContainer/NewsContainer';
 import './App.css';
 
 class App extends Component {
@@ -13,7 +16,9 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-        YOUR CODE GOES HERE!
+        <Menu />
+        <SearchForm />
+        <NewsContainer news="this.state"/>
       </div>
     );
   }
