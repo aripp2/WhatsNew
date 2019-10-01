@@ -1,20 +1,18 @@
 import React from 'react';
-import NewsArticle from '../NewsArticle/NewsArticle'
-import './NewsContainer.css'
+import NewsArticle from '../NewsArticle/NewsArticle';
+import './NewsContainer.css';
 
-const NewsContainer = (state) => {
+const NewsContainer = (props) => {
   return (
-    <div>
-      {state.map(news => (
-        <NewsArticle
-          image={news.img} 
-          headline={news.headline}
-          description={news.description}
-          url={news.url}
-        ))}
-      />
-      
-    </div>
+      props.news.map(article => {
+        return <NewsArticle 
+          key={article.id}
+          image={article.img}
+          headline={article.headline}
+          description={article.description}
+          url={article.url}
+        />
+    })
   )
 }
 
