@@ -3,12 +3,12 @@ import './NewsArticle.css';
 
 const NewsArticle = (props) => {
   return (
-    <div>
+    <article>
       <img src={props.image}/>
       <h3>{props.headline}</h3>
       <p>{props.description}</p>
       <a href={props.url}>See full article</a>
-    </div>
+    </article>
   )
 }
 
