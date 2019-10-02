@@ -19,15 +19,20 @@ class App extends Component {
       science,
       technology
     }
+      // console.log(this.state)
+  }
+
+  changeNewsType = (newsType) => {
+    this.setState({ newsType });
   }
 
   render () {
     return (
       <div className="app">
-        <Menu />
+        <Menu changeNewsType={this.changeNewsType}/>
         <main>
           <SearchForm />
-          <NewsContainer news={this.state.health}/>
+          <NewsContainer news={this.state.science}/>
         </main>  
       </div>
     );
