@@ -3,14 +3,13 @@ import './SearchForm.css';
 
 const SearchForm = () => {
   return (
-    <header>
-      <h1>What's New?</h1>
+    <form>
       <input 
         type="text"
         placeholder="Search for news article here."
       />
       <button className="search-btn">Search Now</button>
-    </header>
+    </form>
 
     )
 }

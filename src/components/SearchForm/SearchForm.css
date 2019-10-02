@@ -1,5 +1,5 @@
-header {
-  height: 100px;
+form {
+  height: 75px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -7,17 +7,13 @@ header {
   align-items: center;
 }
 
-h1 {
-  width: 15%;
-  font-size: 2em;
-  margin-left: 5%;
-}
-
 input {
   height: 40px;
   width: 40%;
-  font-size: 1em;
-  padding-left: 20px;
+  font-size: 1.2em;
+  margin-left: 25px;
+  background-color: #141527;
+  border: none;
 }
 
 .search-btn {
