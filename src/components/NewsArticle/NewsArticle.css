@@ -1,4 +1,8 @@
 img {
-  height: 200px;
-  width: 300px;
+  height: 60%;
+  width: 80%;
+}
+
+article {
+  width: 45%;
 }

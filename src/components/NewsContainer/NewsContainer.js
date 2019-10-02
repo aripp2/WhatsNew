@@ -3,8 +3,7 @@ import NewsArticle from '../NewsArticle/NewsArticle';
 import './NewsContainer.css';
 
 const NewsContainer = (props) => {
-  return (
-      props.news.map(article => {
+  const articles = props.news.map(article => {
         return <NewsArticle 
           key={article.id}
           image={article.img}
@@ -12,7 +11,11 @@ const NewsContainer = (props) => {
           description={article.description}
           url={article.url}
         />
-    })
+      })
+  return ( 
+    <section>
+      {articles}
+    </section>
   )
 }
 

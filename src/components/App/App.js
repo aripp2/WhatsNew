@@ -16,9 +16,11 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-        <Menu />
         <SearchForm />
-        <NewsContainer news={this.state.local}/>
+        <main>
+          <Menu />
+          <NewsContainer news={this.state.local}/>
+        </main>  
       </div>
     );
   }
