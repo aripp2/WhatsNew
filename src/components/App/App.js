@@ -12,18 +12,21 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    this.state = {
+    this.news = {
       local,
       entertainment,
       health,
       science,
       technology
     }
+    this.state = {
+      news: this.news.local
+    }
       // console.log(this.state)
   }
 
   changeNewsType = (newsType) => {
-    this.setState({ newsType });
+    this.setState({ news: this.news[newsType] });
   }
 
   render () {
@@ -32,7 +35,7 @@ class App extends Component {
         <Menu changeNewsType={this.changeNewsType}/>
         <main>
           <SearchForm />
-          <NewsContainer news={this.state.science}/>
+          <NewsContainer news={this.state.news}/>
         </main>  
       </div>
     );

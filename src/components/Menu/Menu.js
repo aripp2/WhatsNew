@@ -10,38 +10,36 @@ const Menu = (props) => {
           <button 
             className="menu-btn"
             id="local"
-            
+            onClick={() => props.changeNewsType('local')}
             >Local News</button>
         </li>
         <li>
           <button 
             className="menu-btn"
-
+            onClick={() => props.changeNewsType('technology')}
             >Technology</button>
         </li>
         <li>
           <button 
             className="menu-btn"
-
+            onClick={() => props.changeNewsType('entertainment')}
             >Entertainment</button>
         </li>
         <li>
           <button 
             className="menu-btn"
-
+            onClick={() => props.changeNewsType('science')}
             >Science</button>
         </li>
         <li>
           <button 
             className="menu-btn"
-
+            onClick={() => props.changeNewsType('health')}
             >Health</button>
         </li>
       </ul>
     </nav>
   )
 }
-
-// onClick={() => props.changeNewsType({event.target.id})}
 
 export default Menu;
