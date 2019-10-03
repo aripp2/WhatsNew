@@ -1,7 +1,9 @@
 import React from 'react';
 import './Menu.css'
 
-const Menu = (props) => {
+const Menu = ({ topics, changeNewsType}) => {
+  console.log(topics)
+ 
   return (
     <nav>
       <h1>What's New?</h1>
@@ -9,32 +11,31 @@ const Menu = (props) => {
         <li>
           <button 
             className="menu-btn"
-            id="local"
-            onClick={() => props.changeNewsType('local')}
+            onClick={() => changeNewsType('local')}
             >Local News</button>
         </li>
         <li>
           <button 
             className="menu-btn"
-            onClick={() => props.changeNewsType('technology')}
+            onClick={() => changeNewsType('technology')}
             >Technology</button>
         </li>
         <li>
           <button 
             className="menu-btn"
-            onClick={() => props.changeNewsType('entertainment')}
+            onClick={() => changeNewsType('entertainment')}
             >Entertainment</button>
         </li>
         <li>
           <button 
             className="menu-btn"
-            onClick={() => props.changeNewsType('science')}
+            onClick={() => changeNewsType('science')}
             >Science</button>
         </li>
         <li>
           <button 
             className="menu-btn"
-            onClick={() => props.changeNewsType('health')}
+            onClick={() => changeNewsType('health')}
             >Health</button>
         </li>
       </ul>

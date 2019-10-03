@@ -29,12 +29,20 @@ class App extends Component {
     this.setState({ news: this.news[newsType] });
   }
 
+  searchNews = (input) => {
+    console.log(input)
+    const matches = this.state.news.filter(article => {
+      return (article.headline.includes(input) || article.descrition.includes(input))
+    })
+    this.setState({ news: matches });
+  }
+
   render () {
     return (
       <div className="app">
-        <Menu changeNewsType={this.changeNewsType}/>
+        <Menu topics={Object.keys(this.news)}changeNewsType={this.changeNewsType}/>
         <main>
-          <SearchForm />
+          <SearchForm searchNews={this.searchNews}/>
           <NewsContainer news={this.state.news}/>
         </main>  
       </div>
