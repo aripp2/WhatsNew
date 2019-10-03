@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsArticle should match the snapshot with all data passed in correctly 1`] = `
+<article>
+  <img
+    src="url"
+  />
+  <h3>
+    This is the headline
+  </h3>
+  <p>
+    This is the description
+  </p>
+  <footer>
+    <a
+      href="link"
+    >
+      See full article
+    </a>
+  </footer>
+</article>
+`;
