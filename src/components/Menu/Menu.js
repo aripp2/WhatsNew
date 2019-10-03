@@ -1,9 +1,7 @@
 import React from 'react';
 import './Menu.css'
 
-const Menu = ({ topics, changeNewsType}) => {
-  console.log(topics)
- 
+const Menu = ({ changeNewsType }) => {
   return (
     <nav>
       <h1>What's New?</h1>

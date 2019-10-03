@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsContainer should match the snapshot with all data passed in correctly 1`] = `
+<section>
+  <NewsArticle
+    description="This is the description"
+    headline="This is the headline"
+    url="link"
+  />
+  <NewsArticle
+    description="another description"
+    headline="another headline"
+    url="another link"
+  />
+</section>
+`;

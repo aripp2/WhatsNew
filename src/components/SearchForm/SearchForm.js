@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './SearchForm.css';
 
 class SearchForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       searchInput: ''
     }
@@ -11,13 +11,12 @@ class SearchForm extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value})
-
   }
 
-  submitSearch = (e, props) => {
+  submitSearch = (e) => {
     e.preventDefault();
     const search = this.state.searchInput;
-    props.searchNews({ search })
+    this.props.searchNews({ search })
   }
 
   render() {
