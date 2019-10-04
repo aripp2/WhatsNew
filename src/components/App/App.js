@@ -12,35 +12,50 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    this.news = {
-      local,
-      entertainment,
-      health,
-      science,
-      technology
-    }
+    // this.news = {
+    //   local,
+    //   entertainment,
+    //   health,
+    //   science,
+    //   technology
+    // }
     this.state = {
-      news: this.news.local
+      news: {
+        local,
+        entertainment,
+        health,
+        science,
+        technology
+      },
+      currentNews: local
     }
       // console.log(this.state)
   }
 
+  // componentDidMount() {
+  //   fetch("https://whats-new-api.herokuapp.com/api/v1/news")
+  //     .then(response => response.json())
+  //     .then(data => this.setState({ 
+  //       news: data,
+  //       currentNews: data.local
+  //     }))
+  //     .catch(err => console.log(err))
+  // }
+
   changeNewsType = (newsType) => {
-    this.setState({ news: this.news[newsType] });
+    // this.setState({ news: this.news[newsType] });
+    this.setState({ currentNews: this.state.news[newsType]})
   }
 
   searchNews = (input) => {
     const fixedInput = input.search.toUpperCase();
-    const matches = this.state.news.filter(article => {
+    const matches = this.state.currentNews.filter(article => {
       const fixedHeadline = article.headline.toUpperCase();
       const fixedDescription = article.description.toUpperCase();
-      if (fixedHeadline.includes(fixedInput) || fixedDescription.includes(fixedInput)) {
-        return article;
-      }
+      return fixedHeadline.includes(fixedInput) || fixedDescription.includes(fixedInput)
     })
-    console.log(matches)
 
-    this.setState({ news: matches });
+    this.setState({ currentNews: matches });
   }
 
   render () {
@@ -49,7 +64,7 @@ class App extends Component {
         <Menu changeNewsType={this.changeNewsType}/>
         <main>
           <SearchForm searchNews={this.searchNews}/>
-          <NewsContainer news={this.state.news}/>
+          <NewsContainer news={this.state.currentNews}/>
         </main>  
       </div>
     );

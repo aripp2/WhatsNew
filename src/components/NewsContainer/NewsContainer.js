@@ -2,8 +2,8 @@ import React from 'react';
 import NewsArticle from '../NewsArticle/NewsArticle';
 import './NewsContainer.css';
 
-const NewsContainer = (props) => {
-  const articles = props.news.map(article => {
+const NewsContainer = ({ news }) => {
+  const articles = news.map(article => {
         return <NewsArticle 
           key={article.id}
           image={article.img}
