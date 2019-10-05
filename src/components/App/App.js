@@ -12,14 +12,9 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    // this.news = {
-    //   local,
-    //   entertainment,
-    //   health,
-    //   science,
-    //   technology
-    // }
     this.state = {
+      // news: {},
+      // currentNews: []
       news: {
         local,
         entertainment,
@@ -29,7 +24,10 @@ class App extends Component {
       },
       currentNews: local
     }
-      // console.log(this.state)
+  }
+
+  changeNewsType = (newsType) => {
+    this.setState({ currentNews: this.state.news[newsType]})
   }
 
   // componentDidMount() {
@@ -42,13 +40,9 @@ class App extends Component {
   //     .catch(err => console.log(err))
   // }
 
-  changeNewsType = (newsType) => {
-    // this.setState({ news: this.news[newsType] });
-    this.setState({ currentNews: this.state.news[newsType]})
-  }
 
   searchNews = (input) => {
-    const fixedInput = input.search.toUpperCase();
+    const fixedInput = input.toUpperCase();
     const matches = this.state.currentNews.filter(article => {
       const fixedHeadline = article.headline.toUpperCase();
       const fixedDescription = article.description.toUpperCase();
