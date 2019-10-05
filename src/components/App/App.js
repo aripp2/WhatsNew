@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import local from '../../data/local';
-import entertainment from '../../data/entertainment';
-import health from '../../data/health';
-import science from '../../data/science';
-import technology from '../../data/technology';
+// import local from '../../data/local';
+// import entertainment from '../../data/entertainment';
+// import health from '../../data/health';
+// import science from '../../data/science';
+// import technology from '../../data/technology';
 import Menu from '../Menu/Menu';
 import SearchForm from '../SearchForm/SearchForm';
 import NewsContainer from '../NewsContainer/NewsContainer';
@@ -13,16 +13,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      // news: {},
-      // currentNews: []
-      news: {
-        local,
-        entertainment,
-        health,
-        science,
-        technology
-      },
-      currentNews: local
+      news: {},
+      currentNews: []
+    //   news: {
+    //     local,
+    //     entertainment,
+    //     health,
+    //     science,
+    //     technology
+    //   },
+    //   currentNews: local
     }
   }
 
@@ -30,15 +30,15 @@ class App extends Component {
     this.setState({ currentNews: this.state.news[newsType]})
   }
 
-  // componentDidMount() {
-  //   fetch("https://whats-new-api.herokuapp.com/api/v1/news")
-  //     .then(response => response.json())
-  //     .then(data => this.setState({ 
-  //       news: data,
-  //       currentNews: data.local
-  //     }))
-  //     .catch(err => console.log(err))
-  // }
+  componentDidMount() {
+    fetch("https://whats-new-api.herokuapp.com/api/v1/news")
+      .then(response => response.json())
+      .then(data => this.setState({ 
+        news: data,
+        currentNews: data.local
+      }))
+      .catch(err => console.log(err))
+  }
 
 
   searchNews = (input) => {
