@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsArticle from '../NewsArticle/NewsArticle';
-import './NewsContainer.css';
+import './NewsContainer.scss';
 
 const NewsContainer = ({ news }) => {
   const articles = news.map(article => {

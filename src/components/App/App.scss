@@ -1,13 +1,15 @@
+@import './src/variables.scss';
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
+  color: $highlight-color;
 }
 
 .app {
   display: flex;
-  background: #141527;
+  background: $dark-color;
   text-align: center;
   width: 100%;
 }
@@ -17,3 +19,5 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+

@@ -1,0 +1,63 @@
+@import './src/variables.scss';
+
+img {
+  height: 250px;
+  width: 100%;
+  margin: 0;
+  border-radius: 3px 3px 0 0;
+}
+
+article {
+  width: 45%;
+  margin: 20px;
+  background-color: white;
+  border-radius: 3px;
+  border: 3px outset $mid-color;
+}
+
+h3 {
+  height: 100px;
+  font-size: 1.5em;
+  color: $dark-color;
+  margin-top: 0;
+  padding: 5px;
+}
+
+p {
+  height: 175px;
+  font-size: 1.2em;
+  color: $dark-color;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    color: $dark-color;
+    svg {
+      fill: $dark-color;
+    }
+  }
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  color: $highlight-color;
+  font-size: 1.5em;
+  background-color: $mid-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 3px 3px;
+}
+
+svg {
+  height: 1em;
+  width: 1em;
+  fill: $highlight-color;
+  margin-left: 25px;
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Menu from '../Menu/Menu';
 import SearchForm from '../SearchForm/SearchForm';
 import NewsContainer from '../NewsContainer/NewsContainer';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor() {

@@ -37,8 +37,6 @@ describe('App', () => {
     }]
   };
 
-  let mockCurrentNews = mockNews.mockLocal;
-
   beforeEach(() => {
     wrapper = shallow(<App />);
   });

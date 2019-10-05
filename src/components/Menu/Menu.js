@@ -1,5 +1,10 @@
 import React from 'react';
-import './Menu.css'
+import './Menu.scss';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaLaptop } from 'react-icons/fa';
+import { FaFilm } from 'react-icons/fa';
+import { FaFlask } from 'react-icons/fa';
+import { FaHeartbeat } from 'react-icons/fa';
 
 const Menu = ({ changeNewsType }) => {
   return (
@@ -10,31 +15,31 @@ const Menu = ({ changeNewsType }) => {
           <button 
             className="menu-btn"
             onClick={() => changeNewsType('local')}
-            >Local News</button>
+            ><FaMapMarkerAlt />Local News</button>
         </li>
         <li>
           <button 
             className="menu-btn"
             onClick={() => changeNewsType('technology')}
-            >Technology</button>
+            ><FaLaptop />Technology</button>
         </li>
         <li>
           <button 
             className="menu-btn"
             onClick={() => changeNewsType('entertainment')}
-            >Entertainment</button>
+            ><FaFilm />Entertainment</button>
         </li>
         <li>
           <button 
             className="menu-btn"
             onClick={() => changeNewsType('science')}
-            >Science</button>
+            ><FaFlask />Science</button>
         </li>
         <li>
           <button 
             className="menu-btn"
             onClick={() => changeNewsType('health')}
-            >Health</button>
+            ><FaHeartbeat />Health</button>
         </li>
       </ul>
     </nav>

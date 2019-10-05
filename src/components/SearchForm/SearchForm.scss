@@ -1,3 +1,6 @@
+@import './src/variables.scss';
+
+
 form {
   height: 75px;
   width: 100%;
@@ -12,15 +15,20 @@ input {
   width: 40%;
   font-size: 1.2em;
   margin-left: 25px;
-  background-color: #141527;
+  background-color: $dark-color;
   border: none;
 }
 
 .search-btn {
   height: 40px;
   width: 20%;
-  color: #141527;
+  color: $dark-color;
   font-size: 1.2em;
   margin-right: 5%;
   border-radius: 5px;
+  background-color: $btn-color;
+
+  &:hover {
+    background-color: $highlight-color;
+  }
 }
