@@ -17,6 +17,7 @@ exports[`NewsArticle should match the snapshot with all data passed in correctly
       href="link"
     >
       See full article
+      <FaArrowRight />
     </a>
   </footer>
 </article>

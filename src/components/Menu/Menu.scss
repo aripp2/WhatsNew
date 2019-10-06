@@ -1,14 +1,14 @@
 @import './src/variables.scss';
 
 nav {
-  color: $dark-color;
   width: 20%;
+  color: $dark-color;
   display: flex;
   flex-direction: column;
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 2.5em;
   margin: 20px auto;
 }
 
@@ -16,30 +16,34 @@ li {
   list-style: none;
 }
 
-svg {
-  height: 1em;
-  width: 1em;
-  fill: $mid-color;
-  margin-right: 15px;
-}
-
 .menu-btn {
-  color: $mid-color;
+  height: 60px;
+  width: 90%;
+  color: $light-color;
   font-size: 1.5em;
   text-align: left;
-  height: 40px;
-  width: 80%;
-  border-radius: 5px;
-  padding-left: 15px;
-  margin: 30px;
+  margin: 20px;
   background-color: $dark-color;
   border: none;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: left;
 
+  svg {
+    height: 1.5em;
+    width: 1.5em;
+    fill: $light-color;
+    margin-right: 15px;
+    background-color: $dark-color;
+  }
+
   &:hover {
     background-color: $highlight-color;
+    
+    svg {
+      background-color: $highlight-color;
+    }
   }
 }
 

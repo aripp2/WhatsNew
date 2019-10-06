@@ -10,11 +10,11 @@ class App extends Component {
     this.state = {
       news: {},
       currentNews: []
-    }
+    };
   }
 
   changeNewsType = (newsType) => {
-    this.setState({ currentNews: this.state.news[newsType]})
+    this.setState({ currentNews: this.state.news[newsType]});
   }
 
   componentDidMount() {
@@ -33,8 +33,7 @@ class App extends Component {
       const fixedHeadline = article.headline.toUpperCase();
       const fixedDescription = article.description.toUpperCase();
       return fixedHeadline.includes(fixedInput) || fixedDescription.includes(fixedInput)
-    })
-
+    });
     this.setState({ currentNews: matches });
   }
 

@@ -1,20 +1,20 @@
 @import './src/variables.scss';
 
-
 form {
-  height: 75px;
+  height: 100px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 input {
   height: 40px;
   width: 40%;
   font-size: 1.2em;
-  margin-left: 25px;
+  margin-left: 35px;
+  padding-left: 15px;
   background-color: $dark-color;
   border: none;
 }
@@ -25,10 +25,12 @@ input {
   color: $dark-color;
   font-size: 1.2em;
   margin-right: 5%;
+  background-color: $light-color;
   border-radius: 5px;
-  background-color: $btn-color;
 
   &:hover {
+    color: $light-color;
     background-color: $highlight-color;
+    border: 3px outset $light-color;
   }
 }

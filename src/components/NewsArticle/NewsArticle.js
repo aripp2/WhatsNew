@@ -2,15 +2,14 @@ import React from 'react';
 import './NewsArticle.scss';
 import { FaArrowRight } from 'react-icons/fa';
 
-const NewsArticle = (props) => {
+const NewsArticle = ({ image, headline, description, url }) => {
   return (
     <article>
-      <img src={props.image} alt=""/>
-      <h3>{props.headline}</h3>
-      <p>{props.description}</p>
+      <img src={ image } alt=""/>
+      <h3>{ headline }</h3>
+      <p>{ description }</p>
       <footer>
-        <a href={props.url}>
-
+        <a href={ url }>
         See full article
         <FaArrowRight />
         </a>
