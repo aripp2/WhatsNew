@@ -14,6 +14,8 @@ As a student at Turing School of Software and Design this is the first solo proj
 
 ### See it in Action
 
+![GH Pages](https://aripp2.github.io/WhatsNew/)
+
 1. Clone down this repo.
 2. Run: `npm install`
 3. Run: `npm start` to view in your browser. 
